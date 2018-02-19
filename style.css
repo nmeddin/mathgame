@@ -6,3 +6,9 @@
 	margin-right: right;
 	
 }
+#myCanvas{
+	background-color: black;
+	display:inline;
+	width:200%;
+	margin:left;
+}
