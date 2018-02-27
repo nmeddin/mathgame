@@ -7,7 +7,7 @@
 	
 }
 #myCanvas{
-	#canvas { background:url(night-927168_960_720.jpg) }
+	#canvas { background(night-927168_960_720.jpg) }
 	display:inline;
 	width:200%;
 	margin:left;

@@ -92,7 +92,7 @@ function clamp(value, min, max){
     return value;
 }
 function fixCamera(theX, theY,xenemy, yenemy, xfixed, yfixed){
-  getCanvas.setTransform(1,0,0,1,0,0);
+  getCanvas.setTransform(,0,01,1,0,0);
   
   
   //Clamp the camera position to the world bounds while centering the camera around the player                                             
