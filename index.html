@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 	<head>
 	    <meta charset="utf-8" />
@@ -15,12 +15,12 @@
 		<script src = "./game.js"></script>
 	    </div>
 	</body>
-</html> 
+</html> -->
 
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
-		<title>Math Game</title>
+		<title>Space Shooter Demo</title>
 		<style>
 			canvas {
 				position: absolute;
@@ -28,13 +28,29 @@
 				left: 0px;
 				background: transparent;
 			}
+			#background {
+				z-index: -2;
+			}
+			#main {
+				z-index: -1;
+			}
+			#ship {
+				z-index: 0;
+			}
 		</style>
 	</head>
-	<body onload="init()">
-		The canvas for the panning background
+	<body>
+		<!-- The canvas for the panning background -->
 		<canvas id="background" width="600" height="360">
 			Your browser does not support canvas. Please try again with a different browser.
 		</canvas>
-		<script src="game.js"></script>
+		<!-- The canvas for all enemy ships and bullets -->
+		<canvas id="main" width="600" height="360">
+		</canvas>
+		<!-- The canvas the ship uses (can only move up
+         one forth the screen.) -->
+		<canvas id="ship" width="600" height="360">
+		</canvas>
+		<script src="space_shooter_part_two.js"></script>
 	</body>
-</html> -->
+</html>
