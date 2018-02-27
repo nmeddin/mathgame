@@ -89,26 +89,6 @@ var makeRandomCourse = function(){
 };
 //makeRandomCourse();
 
-function player(x,y){
-  var img = new Image();
-  img.src = "icecream.jpg";  
-  getCanvas.drawImage(img,x,y);
-};
-function enemy(x,y){
-  var img = new Image();
-  img.src = "fireball.jpg";
-  getCanvas.drawImage(img,x,y); 
-};
-function fixedEnemy(x,y){
-  var img = new Image(); 
-  img.src = 'sun.jpg';
-  getCanvas.drawImage(img,x,y);
-}
-function keyWin(x,y){
-  var img = new Image(); 
-  img.src = 'cone.jpg';      
-  getCanvas.drawImage(img,x,y);
-};
 
 function Rounds(theLevel){
   //this takes the level 2d array 
