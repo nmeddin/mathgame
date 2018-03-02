@@ -1,0 +1,133 @@
+body{
+  background-image: url(https://wallpaperscraft.com/image/space_background_blue_dots_73340_3840x2400.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.AboutMission{
+  margin: auto;
+  width: 50%;
+    background-color: #5E90AF;
+    padding: 10px;
+    text-align: center;
+  
+}
+
+:root {
+  --jumbotron-padding-y: 3rem;
+}
+
+.jumbotron {
+  padding-top: var(--jumbotron-padding-y);
+  padding-bottom: var(--jumbotron-padding-y);
+  margin-bottom: 0;
+  background-color: #5E90AF;
+}
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: calc(var(--jumbotron-padding-y) * 2);
+    padding-bottom: calc(var(--jumbotron-padding-y) * 2);
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+.headtitle{
+  font: 100 80px/0.8 'Cookie', Helvetica, sans-serif;
+  color: black;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
+}
+.jumbotron-heading {
+  font-weight: 300;
+  font: 400 130px/0.8 'Cookie', Helvetica, sans-serif;
+  color: black;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+.theCanvas{
+  width: 100%;
+  text-align: center;
+  background-color:#5E90AF;
+  padding-right:0;
+  padding-left: 0; 
+  margin-left: auto;
+  margin-right: auto; 
+  height:auto;
+  position: center;
+
+}
+canvas {
+        position: absolute;
+        padding-left: center;
+          padding-right: auto;
+          margin-left: auto;
+          margin-right: center;
+          display: inline;
+          width: 600px;
+          background: transparent;
+          border: 10px solid white;
+          /*position:center;
+          margin-left: auto;
+          margin-right:auto;
+          padding-left: 0; 
+          padding-right: 0;
+          width: 100px;
+          display:block;
+          align-items: center;
+          background: transparent;*/
+
+  
+      }
+
+      #background {
+        z-index: -2;
+      }
+      #main {
+        z-index: -1;
+      }
+      #ship {
+        z-index: 0;
+      }
+      .score {
+        color: white;
+        font-family: Helvetica, sans-serif;
+        cursor: default;
+      }
+      .game-over {
+        color: white;
+        font-family: Helvetica, sans-serif;
+        font-size: 30px;
+        cursor: default;
+        display: none;
+      }
+      .game-over span {
+        font-size: 20px;
+        cursor: pointer;
+        position: relative;
+        left: 50px;
+      }
+      .game-over span:hover {
+        color: white;
+      }
+      .loading {
+        color: white;
+        font-family: Helvetica, sans-serif;
+        font-size: 30px;
+        cursor: default;
+      }
