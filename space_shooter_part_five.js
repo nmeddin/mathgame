@@ -796,7 +796,7 @@ function Game() {
   // Restart the game
   this.restart = function() {
     this.gameOverAudio.pause();
-
+    document.getElementById('continue').style.display = "block";
     document.getElementById('game-over').style.display = "none";
     this.bgContext.clearRect(0, 0, this.bgCanvas.width, this.bgCanvas.height);
     this.shipContext.clearRect(0, 0, this.shipCanvas.width, this.shipCanvas.height);
@@ -825,6 +825,8 @@ function Game() {
     this.backgroundAudio.pause();
     this.gameOverAudio.currentTime = 0;
     this.gameOverAudio.play();
+    document.getElementById('start').style.display = "none";
+    document.getElementById('continue').style.display = "none";
     document.getElementById('game-over').style.display = "block";
   };
 }
@@ -836,7 +838,6 @@ function checkReadyState() {
   if (game.gameOverAudio.readyState === 4 && game.backgroundAudio.readyState === 4) {
     window.clearInterval(game.checkAudio);
     document.getElementById('loading').style.display = "none";
-    game.start();
   }
 }
 

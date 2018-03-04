@@ -93,10 +93,12 @@
       </section>
       <br/><br/><br/>
           <div class = "theCanvas">
-          <div class="score">SCORE: <span id="score"></span></div>
+          <br/><div class = "start" id= "start"><p><span onclick= "game.start()">START</span></p></div>  
+          <div class = "continue" id = "continue">Continue going!!</div>
           <div class="game-over" id="game-over">GAME OVER<p><span onclick="game.restart()">Restart</span></p></div>
           <div class="loading" id="loading">LOADING...<p>Please wait</p></div>
            </div>
+           <br/><div class="score">SCORE: <span id="score"></span></div>
           <canvas id="background" width="600" height="360" align = "center">
             Your browser does not support canvas. Please try again with a different browser.
           </canvas>
@@ -107,7 +109,17 @@
          one forth the screen. -->
           <canvas id="ship" width="600" height="360" align = "center">
           </canvas>
+          <div id = "answers">
+            <p>What is 5 * 5 ?</p>
+            <form action = "" method = "get" id = "problem1">  
+              <input type = "radio" name = "number">5 <br>
+              <input type = "radio" name = "number">10  <br>
+              <input type = "radio" name = "number">25   <br>
+            </form>
+            <button type="submit" form = "problem1" value ="Submit">Submit</button>
+          </div>
           <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
           
         
 
