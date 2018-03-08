@@ -135,11 +135,13 @@ canvas{
         cursor: default;
         display: block;
       }
+
       .start span {
-        font-size: 50px;
+        font-size: 80px;
         cursor: pointer;
         position: relative;
-        left: 50px;
+        text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+        left: 0px;
       }
       .start span:hover {
         color: black;
