@@ -104,7 +104,7 @@ canvas {
         z-index: 0;
       }
       .score {
-        color: white;
+        color: #1b1e21;
         font-family: Helvetica, sans-serif;
         cursor: default;
       }
