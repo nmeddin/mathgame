@@ -111,7 +111,7 @@ canvas {
       }
       .game-over {
         text-align: center;
-        color: white;
+        color: black;
         font-family: Helvetica, sans-serif;
         font-size: 30px;
         cursor: default;
@@ -124,7 +124,7 @@ canvas {
         left: 50px;
       }
       .game-over span:hover {
-        color: white;
+        color: black;
       }
       .loading {
         color: white;
@@ -134,7 +134,7 @@ canvas {
       }
       .start{
         text-align: center;
-        color: white;
+        color: black;
         font-size:50px;
         font-family: Helvetica, sans-serif;
         cursor: default;
@@ -147,7 +147,7 @@ canvas {
         left: 50px;
       }
       .start span:hover {
-        color: white;
+        color: black;
       }
       .continue{
         font-size:50px;
