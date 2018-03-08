@@ -73,11 +73,9 @@ footer p {
 
 }
 canvas {
-        position: absolute;
-        padding-left: center;
-          padding-right: auto;
+          position: absolute;
+          padding-top: 20px;
           margin-left: auto;
-          margin-right: center;
           display: inline;
           width: 600px;
           background: transparent;
