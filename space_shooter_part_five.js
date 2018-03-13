@@ -768,8 +768,7 @@ function Game() {
       this.checkAudio = window.setInterval(function(){checkReadyState()},1000);
     }
   };
-
-  // Spawn a new wave of enemies
+   // Spawn a new wave of enemies
   this.spawnWave = function() {
     var height = imageRepository.enemy.height;
     var width = imageRepository.enemy.width;
@@ -785,12 +784,26 @@ function Game() {
       }
     }
   }
-
+  
   // Start the animation loop
   this.start = function() {
+    document.getElementById('answers').style.display = "none";
+    document.getElementById('finalMess').style.display = "none";
+    document.getElementById('showScore').style.display = "block";
+    document.getElementById('start').style.display = "none";
+    document.getElementById('continue').style.display = "block";
+    document.getElementById('game-over').style.display = "none";
+    document.getElementById('problem1').style.display = "none";
+    document.getElementById('problem2').style.display = "none";
+    document.getElementById('problem3').style.display = "none";
+    document.getElementById('problem4').style.display = "none";
+    document.getElementById('problem5').style.display = "none";
+    document.getElementById('numPro').style.display = "none";
+    var need = document.getElementById('score').innerHTML;
     this.ship.draw();
     this.backgroundAudio.play();
     animate();
+    document.getElementById('score').innerHTML = need;
   };
 
   // Restart the game
@@ -798,6 +811,17 @@ function Game() {
     this.gameOverAudio.pause();
     document.getElementById('continue').style.display = "block";
     document.getElementById('game-over').style.display = "none";
+    document.getElementById('answers').style.display = "none";
+    document.getElementById('showScore').style.display = "block";
+    // document.getElementById('score').style.display = "block";
+    document.getElementById('finalMess').style.display = "none";
+    document.getElementById('problem1').style.display = "none";
+    document.getElementById('problem2').style.display = "none";
+    document.getElementById('problem3').style.display = "none";
+    document.getElementById('problem4').style.display = "none";
+    document.getElementById('problem5').style.display = "none";
+    document.getElementById('numPro').style.display = "none";
+    //document.getElementById('score').style.display = "block";
     this.bgContext.clearRect(0, 0, this.bgCanvas.width, this.bgCanvas.height);
     this.shipContext.clearRect(0, 0, this.shipCanvas.width, this.shipCanvas.height);
     this.mainContext.clearRect(0, 0, this.mainCanvas.width, this.mainCanvas.height);
@@ -812,23 +836,56 @@ function Game() {
     this.spawnWave();
     this.enemyBulletPool.init("enemyBullet");
 
-    this.playerScore = 0;
+    //this.playerScore = 0;
 
     this.backgroundAudio.currentTime = 0;
     this.backgroundAudio.play();
 
     this.start();
   };
-
-  // Game over
+  // Game over for now temporary.
   this.gameOver = function() {
+    var num = Math.floor(Math.random() * 5)+1;
+    var str = "problem"+num;
+    this.backgroundAudio.pause();
+    this.gameOverAudio.currentTime = 0;
+    this.gameOverAudio.play();
+    document.getElementById('start').style.display = "none";
+    document.getElementById('continue').style.display = "block";
+    document.getElementById('game-over').style.display = "none";
+    document.getElementById('answers').style.display = "block";
+    document.getElementById('finalMess').style.display = "none";
+    document.getElementById('button1').style.display = "block";
+    document.getElementById('showScore').style.display = "none";
+    document.getElementById(str).style.display = "block";
+    document.getElementById('numPro').style.display = "block";
+    document.getElementById('theNum').innerHTML = num;
+    
+  };
+  // Game finally over
+  this.gameFinal = function() {
     this.backgroundAudio.pause();
     this.gameOverAudio.currentTime = 0;
     this.gameOverAudio.play();
     document.getElementById('start').style.display = "none";
     document.getElementById('continue').style.display = "none";
     document.getElementById('game-over').style.display = "block";
+    document.getElementById('answers').style.display = "block";
+    document.getElementById('button1').style.display = "none";
+    document.getElementById('showScore').style.display = "none";
+    document.getElementById('finalMess').style.display = "block";
+    document.getElementById('problem1').style.display = "none";
+    document.getElementById('problem2').style.display = "none";
+    document.getElementById('problem3').style.display = "none";
+    document.getElementById('problem4').style.display = "none";
+    document.getElementById('problem5').style.display = "none";
+    document.getElementById('numPro').style.display = "none";
+    var theOld = document.getElementById('score').innerHTML;
+    document.getElementById('scoreOld').innerHTML = theOld;
+    document.getElementById('score').innerHTML = 0;
+    this.playerScore = 0;
   };
+  
 }
 
 /**

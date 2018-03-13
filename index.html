@@ -48,7 +48,7 @@
 
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">Welcome to Geometric Galaxies!</h1>
+          <h1 class="jumbotron-heading"><img src = "mathwars.jpg"></h1>
           <p class="lead text-white">Your journey awaits...</p>
           <p>
             <!-- <a href="#" class="btn btn-primary my-2">Main call to action</a>
@@ -84,11 +84,15 @@
       <br/><br/><br/>
           <div class = "theCanvas">
           <br/><div class = "start" id= "start"><p><span onclick= "game.start()">Start</span></p></div>  
-          <div class = "continue" id = "continue">Continue going!!</div>
+          <div class = "continue" id = "continue">Continue going!</div>
           <div class="game-over" id="game-over">GAME OVER<p><span onclick="game.restart()">Restart</span></p></div>
           <div class="loading" id="loading">LOADING...<p>Please wait</p></div>
            </div>
-           <br/><div class="score">SCORE: <span id="score"></span></div>
+           
+            
+           	<div class="score" id ="showScore">SCORE: <span id="score"></span></div>
+           <!--600,360-->
+          <div id = "canvasBig">
           <canvas id="background" width="600" height="360" align = "center">
             Your browser does not support canvas. Please try again with a different browser.
           </canvas>
@@ -99,14 +103,45 @@
          one forth the screen. -->
           <canvas id="ship" width="600" height="360" align = "center">
           </canvas>
-          <div id = "answers">
-            <p>What is 5 * 5 ?</p>
-            <form action = "" method = "get" id = "problem1">  
-              <input type = "radio" name = "number">5 <br>
-              <input type = "radio" name = "number">10  <br>
-              <input type = "radio" name = "number">25   <br>
+        </div> 
+          <br/>
+          
+          <div id = "answers" class="hide">
+            <!--All math problems come from the Kuta Software https://www.kutasoftware.com/freeipa.html   -->
+            <div id = "finalMess" style = "display: none;" align = "center" text-align="center">
+              <p>Sorry you lost! <br/>You got <span id="scoreOld"></span>!! <br/>Great job! Restart the game to try again! </p>
+            </div>
+            <div id = "numPro" style = "display:none">
+                <p>Problem <span id = "theNum"></span></p>
+            </div>
+            <form action = "" method = "get" id = "problem1" style ="display: none;" align ="center">  <p>What is 5 * 5 ?</p>
+              <input type = "radio" name = "number1" value = "wrong"> 5 <br>
+              <input type = "radio" name = "number1" value = "wrong"> 10  <br>
+              <input type = "radio" name = "number1" value = "correct"> 25   <br>
             </form>
-            <button type="submit" form = "problem1" value ="Submit">Submit</button>
+            <form action = "" method = "get" id = "problem2" style ="display: none;">  <p> Evaluate each using the values given. y + yx; use x = 10, and y = 8.</p> 
+              <input type = "radio" name = "number2" value = "correct"> 88<br>
+              <input type = "radio" name = "number2" value = "wrong"> 90  <br>
+              <input type = "radio" name = "number2" value = "wrong"> 160 <br>
+            </form>
+            <form action = "" method = "get" id = "problem3" style ="display: none;">  <p>Lisa is cooking muffins. The recipe calls for 7 cups of sugar.  She has already put in 2 cups. How many more cups does she need to put in?</p>
+              <input type = "radio" name = "number3" value = "wrong"> 14<br>
+              <input type = "radio" name = "number3" value = "wrong"> 10 <br>
+              <input type = "radio" name = "number3" value = "correct"> 5   <br>
+            </form>
+            <form action = "" method = "get" id = "problem4" style ="display: none;">  <p>Find the LCM(Least Common Multiple) of the next problem. 15,20</p>
+              <input type = "radio" name = "number4" value = "wrong"> 15 <br>
+              <input type = "radio" name = "number4" value = "wrong"> 25  <br>
+              <input type = "radio" name = "number4" value = "correct"> 60   <br>
+            </form>
+             <form action = "" method = "get" id = "problem5" style ="display: none;">  <p>Maria bought seven boxes. A week later half of all her boxes were destroyed in a fire. There are now only 22 boxes left. With how many did she start?</p>
+              <input type = "radio" name = "number5" value = "wrong"> 15 <br>
+              <input type = "radio" name = "number5" value = "correct"> 37 <br>
+              <input type = "radio" name = "number5" value = "wrong"> 60 <br>
+            </form>
+            <div id = "button1">
+              <button type="submit" onclick = "return calculate();" value ="Submit" id = "button" align = "center" text-align= "center" >Submit</button>
+            </div>
           </div>
           <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
@@ -117,8 +152,8 @@
 
 
     </main>
-    <br/><br/><br/><br/><br/>
-    <footer class="text-muted">x
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <footer class="text-muted">
       <div class="container">
         <p class="float-right">
           <a href="#">Back to top</a>
@@ -131,7 +166,24 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    
+    <script>
+      // With help from stackoverflow. They're helpful https://stackoverflow.com/questions/13935786/quiz-counts-radio-button-values
+      function calculate(){
+        var che = true;
+        var theNumber = document.getElementById('theNum').innerHTML;
+          var radios = document.getElementsByName('number'+theNumber);
+          for(var j = 0; j < radios.length;j++){
+           var radio = radios[j]; console.log(radio);
+           if(radio.value == "correct"&&radio.checked){
+             return game.restart();
+             che = false;
+           }
+        }if(che){
+          return game.gameFinal();
+        }
+        
+      }
+    </script>
     <script src="space_shooter_part_five.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="./assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
