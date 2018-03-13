@@ -799,6 +799,8 @@ function Game() {
     document.getElementById('problem4').style.display = "none";
     document.getElementById('problem5').style.display = "none";
     document.getElementById('numPro').style.display = "none";
+    document.getElementById('button1').style.display = "none";
+    document.getElementById('button').style.display = "none";
     var need = document.getElementById('score').innerHTML;
     this.ship.draw();
     this.backgroundAudio.play();
@@ -813,6 +815,8 @@ function Game() {
     document.getElementById('game-over').style.display = "none";
     document.getElementById('answers').style.display = "none";
     document.getElementById('showScore').style.display = "block";
+    document.getElementById('button1').style.display = "none";
+    document.getElementById('button').style.display = "none";
     // document.getElementById('score').style.display = "block";
     document.getElementById('finalMess').style.display = "none";
     document.getElementById('problem1').style.display = "none";
@@ -856,6 +860,7 @@ function Game() {
     document.getElementById('answers').style.display = "block";
     document.getElementById('finalMess').style.display = "none";
     document.getElementById('button1').style.display = "block";
+    document.getElementById('button').style.display = "block";
     document.getElementById('showScore').style.display = "none";
     document.getElementById(str).style.display = "block";
     document.getElementById('numPro').style.display = "block";
@@ -872,6 +877,7 @@ function Game() {
     document.getElementById('game-over').style.display = "block";
     document.getElementById('answers').style.display = "block";
     document.getElementById('button1').style.display = "none";
+    document.getElementById('button').style.display = "none";
     document.getElementById('showScore').style.display = "none";
     document.getElementById('finalMess').style.display = "block";
     document.getElementById('problem1').style.display = "none";

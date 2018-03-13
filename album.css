@@ -182,9 +182,12 @@ canvas{
         width: 100%;
       }
       #button1{
-        display:none;
+        
         text-align: center;
       }
+      #button{ 
+      text-align: center;
+       }
       #finalMess{
 
       }
