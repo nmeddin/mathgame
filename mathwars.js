@@ -1,19 +1,7 @@
-
-
-/* NOTES TO REMEMBER
- * Could add
- * - hitboxes to all objects to make collision better
- * - levels
- * - bosses
- * - explosions / particles
- * - parallax background
- * - vectors for movement
- * - lirbraries! http://www.createjs.com/#!/CreateJS
- */
-
 /* RESOURCES
  * http://www.w3schools.com/html5/html5_ref_av_dom.asp
  * http://www.superflashbros.net/as3sfxr/
+ * http://blog.sklambert.com/html5-canvas-game-the-enemy-ships/
  */
 
 /**
