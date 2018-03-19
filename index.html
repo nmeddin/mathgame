@@ -84,7 +84,7 @@
       <br/><br/><br/>
           <div class = "theCanvas">
           <br/><div class = "start" id= "start"><p><span onclick= "game.start()">Start</span></p></div>  
-          <div class = "continue" id = "continue">Continue going!</div>
+          <div class = "continue" id = "continue">Keep going!</div>
           <div class="game-over" id="game-over">GAME OVER<p><span onclick="game.restart()">Restart</span></p></div>
           <div class="loading" id="loading">LOADING...<p>Please wait</p></div>
            </div>
@@ -107,40 +107,115 @@
           <br/>
           
           <div id = "answers" class="hide">
-            <!--All math problems come from the Kuta Software https://www.kutasoftware.com/freeipa.html   -->
+            <!--All math problems come from K5 Learning  http://www.k5learning.com/free-math-worksheets/fifth-grade-5/place-value-rounding/place-value-5-digit   -->
             <div id = "finalMess" style = "display: none;" align = "center" text-align="center">
-              <p>Sorry you lost! <br/>You got <span id="scoreOld"></span>!! <br/>Great job! Restart the game to try again! </p>
+              <p> You lost. <br/>You got <span id="scoreOld"></span> points! <br/> Restart the game to try again. </p>
             </div>
             <div id = "numPro" style = "display:none">
-                <p>Problem <span id = "theNum"></span></p>
+                <p>Problem <span id = "theNum" style = "display:none" ></span></p>
             </div>
-            <form action = "" method = "get" id = "problem1" style ="display: none;" align ="center">  <p>What is 5 * 5 ?</p>
-              <input type = "radio" name = "number1" value = "wrong"> 5 <br>
-              <input type = "radio" name = "number1" value = "wrong"> 10  <br>
-              <input type = "radio" name = "number1" value = "correct"> 25   <br>
+            <form action = "" method = "get" id = "problem1" style ="display: none;" >  <p>What is 5 * 5 ?</p>
+              &nbsp;<input type = "radio" name = "number1" value = "wrong"> 5 <br>
+              &nbsp;<input type = "radio" name = "number1" value = "wrong"> 10  <br>
+              &nbsp;<input type = "radio" name = "number1" value = "correct"> 25   <br>
             </form>
-            <form action = "" method = "get" id = "problem2" style ="display: none;">  <p> Evaluate each using the values given. y + yx; use x = 10, and y = 8.</p> 
-              <input type = "radio" name = "number2" value = "correct"> 88<br>
-              <input type = "radio" name = "number2" value = "wrong"> 90  <br>
-              <input type = "radio" name = "number2" value = "wrong"> 160 <br>
+            <form action = "" method = "get" id = "problem2" style ="display: none;">  <p> Which 5 digit number is this? 30,000 + 100 + 4</p> 
+              &nbsp;<input type = "radio" name = "number2" value = "correct"> 30,104<br>
+              &nbsp;<input type = "radio" name = "number2" value = "wrong"> 30,100 <br>
+              &nbsp;<input type = "radio" name = "number2" value = "wrong"> 31,004 <br>
             </form>
-            <form action = "" method = "get" id = "problem3" style ="display: none;">  <p>Lisa is cooking muffins. The recipe calls for 7 cups of sugar.  She has already put in 2 cups. How many more cups does she need to put in?</p>
-              <input type = "radio" name = "number3" value = "wrong"> 14<br>
-              <input type = "radio" name = "number3" value = "wrong"> 10 <br>
-              <input type = "radio" name = "number3" value = "correct"> 5   <br>
+            <form action = "" method = "get" id = "problem3" style ="display: none;">  <p> Which 5 digit number is this? 80,000 + 4,000 + 70 + 3</p>
+              &nbsp;<input type = "radio" name = "number3" value = "wrong"> 120,073<br>
+              &nbsp;<input type = "radio" name = "number3" value = "wrong"> 84,730 <br>
+              &nbsp;<input type = "radio" name = "number3" value = "correct"> 84,073   <br>
             </form>
-            <form action = "" method = "get" id = "problem4" style ="display: none;">  <p>Find the LCM(Least Common Multiple) of the next problem. 15,20</p>
-              <input type = "radio" name = "number4" value = "wrong"> 15 <br>
-              <input type = "radio" name = "number4" value = "wrong"> 25  <br>
-              <input type = "radio" name = "number4" value = "correct"> 60   <br>
+            <form action = "" method = "get" id = "problem4" style ="display: none;">  <p> Which 5 digit number is this? 10,000 + 5,000 + 200 + 70 + 7 </p>
+              &nbsp;<input type = "radio" name = "number4" value = "correct"> 15,277   <br>
+              &nbsp;<input type = "radio" name = "number4" value = "wrong"> 6,277 <br>
+              &nbsp;<input type = "radio" name = "number4" value = "wrong"> 15,907  <br>
             </form>
-             <form action = "" method = "get" id = "problem5" style ="display: none;">  <p>Maria bought seven boxes. A week later half of all her boxes were destroyed in a fire. There are now only 22 boxes left. With how many did she start?</p>
-              <input type = "radio" name = "number5" value = "wrong"> 15 <br>
-              <input type = "radio" name = "number5" value = "correct"> 37 <br>
-              <input type = "radio" name = "number5" value = "wrong"> 60 <br>
+             <form action = "" method = "get" id = "problem5" style ="display: none;">  <p> Which 5 digit number is this? 60,000 + 5,000 + 600 + 60 + 4</p>
+              &nbsp;<input type = "radio" name = "number5" value = "wrong"> 75,664 <br>
+              &nbsp;<input type = "radio" name = "number5" value = "correct"> 65,664 <br>
+              &nbsp;<input type = "radio" name = "number5" value = "wrong"> 60,624 <br>
+            </form>
+            <form action = "" method = "get" id = "problem6" style ="display: none;">  <p> ______ x 98 = 98000   What should be in the blank spot?</p>
+              &nbsp;<input type = "radio" name = "number6" value = "wrong"> 10,000<br>
+              &nbsp;<input type = "radio" name = "number6" value = "wrong"> 10 <br>
+              &nbsp;<input type = "radio" name = "number6" value = "correct"> 1,000 <br>
+            </form>
+            <form action = "" method = "get" id = "problem7" style ="display: none;">  <p> 1,000 x _______ = 663,000   What should be in the blank spot?</p>
+              &nbsp;<input type = "radio" name = "number7" value = "correct"> 663 <br>
+              &nbsp;<input type = "radio" name = "number7" value = "wrong"> 6,630 <br>
+              &nbsp;<input type = "radio" name = "number7" value = "wrong"> 66,300 <br>
+            </form>
+            <form action = "" method = "get" id = "problem8" style ="display: none;">  <p> 1,000 x _______ = 220,000   What should be in the blank spot?</p>
+              &nbsp;<input type = "radio" name = "number8" value = "wrong"> 2,200 <br>
+              &nbsp;<input type = "radio" name = "number8" value = "correct"> 220 <br>
+              &nbsp;<input type = "radio" name = "number8" value = "wrong"> 22 <br>
+            </form>
+            <form action = "" method = "get" id = "problem9" style ="display: none;">  <p> 115 x _______ = 115,000   What should be in the blank spot?</p>
+              &nbsp;<input type = "radio" name = "number9" value = "wrong"> 10,000 <br>
+              &nbsp;<input type = "radio" name = "number9" value = "wrong"> 100 <br>
+               &nbsp;<input type = "radio" name = "number9" value = "correct"> 1,000 <br>
+            </form>
+            <form action = "" method = "get" id = "problem10" style ="display: none;">  <p> 689 x _______ = 689,000   What should be in the blank spot?</p>
+              &nbsp;<input type = "radio" name = "number10" value = "wrong"> 10,000 <br>
+              &nbsp;<input type = "radio" name = "number10" value = "correct"> 100,000 <br>
+              &nbsp;<input type = "radio" name = "number10" value = "wrong"> 1,000 <br>
+            </form>
+            <form action = "" method = "get" id = "problem11" style ="display: none;">  <p> 9.6 + 9.7 = ? </p>
+              &nbsp;<input type = "radio" name = "number11" value = "correct"> 19.3 <br>
+              &nbsp;<input type = "radio" name = "number11" value = "wrong"> 18.2 <br>
+              &nbsp;<input type = "radio" name = "number11" value = "wrong"> 18.3 <br>
+            </form>
+            <form action = "" method = "get" id = "problem12" style ="display: none;">  <p> 1.6 + 7.8 = ? </p>
+              &nbsp;<input type = "radio" name = "number12" value = "wrong"> 8.4 <br>
+              &nbsp;<input type = "radio" name = "number12" value = "correct"> 9.4 <br>
+              &nbsp;<input type = "radio" name = "number12" value = "wrong"> 8.8 <br>
+            </form>
+            <form action = "" method = "get" id = "problem13" style ="display: none;">  <p> 4.0 + 4.8 = ? </p>
+              &nbsp;<input type = "radio" name = "number13" value = "wrong"> 8.4<br>
+              &nbsp;<input type = "radio" name = "number13" value = "wrong"> 6.8 <br>
+              &nbsp;<input type = "radio" name = "number13" value = "correct"> 8.8 <br>
+            </form>
+            <form action = "" method = "get" id = "problem14" style ="display: none;">  <p> 1.6 + 7.8 = ? </p>
+              &nbsp;<input type = "radio" name = "number14" value = "wrong"> 8.4 <br>
+              &nbsp;<input type = "radio" name = "number14" value = "correct"> 9.4 <br>
+              &nbsp;<input type = "radio" name = "number14" value = "wrong"> 8.8 <br>
+            </form>
+            <form action = "" method = "get" id = "problem15" style ="display: none;">  <p> You give 1/3 of a pan of brownies to Susan and 1/6 of the pan of brownies to Patrick. How much of the pan of brownies did you give away?</p>
+              &nbsp;<input type = "radio" name = "number15" value = "correct"> 1/2 <br>
+              &nbsp;<input type = "radio" name = "number15" value = "wrong"> 1/3 <br>
+              &nbsp;<input type = "radio" name = "number15" value = "wrong"> 1/4 <br>
+            </form>
+            <form action = "" method = "get" id = "problem16" style ="display: none;">  <p> Convert to a fraction. 0.83  </p>
+              &nbsp;<input type = "radio" name = "number16" value = "wrong"> 83/1 <br>
+              &nbsp;<input type = "radio" name = "number16" value = "correct">83/100 <br>
+              &nbsp;<input type = "radio" name = "number16" value = "wrong"> 83/50<br>
+            </form>
+            <form action = "" method = "get" id = "problem17" style ="display: none;">  <p> You have 2/4 of a pizza and you want to share it equally between 2 people. How much of the pizza does each person get? </p>
+              &nbsp;<input type = "radio" name = "number17" value = "wrong"> 1/2 <br>
+              &nbsp;<input type = "radio" name = "number17" value = "wrong"> 1/8 <br>
+              &nbsp;<input type = "radio" name = "number17" value = "correct"> 1/4 <br>
+            </form>
+            <form action = "" method = "get" id = "problem18" style ="display: none;">  <p> A baker is making cakes for a big party. She uses 1/4 cup of oil for each cake. How many cakes can she make if she has a bottle of oil that has 6 cups in it? </p>
+              &nbsp;<input type = "radio" name = "number18" value = "wrong"> 6/4 <br>
+              &nbsp;<input type = "radio" name = "number18" value = "correct"> 24 <br>
+              &nbsp;<input type = "radio" name = "number18" value = "wrong"> 4/6 <br>
+            </form>
+            <form action = "" method = "get" id = "problem19" style ="display: none;">  <p> A recipe calls for 2 cups of liquid, which includes 1⁄4 cup molasses. What fraction of the liquid in the recipe is molasses? </p>
+              &nbsp;<input type = "radio" name = "number19" value = "correct"> 1/8 <br>
+              &nbsp;<input type = "radio" name = "number19" value = "wrong"> 1/4 <br>
+              &nbsp;<input type = "radio" name = "number19" value = "wrong"> 1/2 <br>
+            </form>
+            <form action = "" method = "get" id = "problem20" style ="display: none;">  <p> 0.77 - 0.58 = ? </p>
+              &nbsp;<input type = "radio" name = "number20" value = "wrong"> 0.15 <br>
+              &nbsp;<input type = "radio" name = "number20" value = "correct"> 0.19 <br>
+              &nbsp;<input type = "radio" name = "number20" value = "wrong"> 0.16 <br>
             </form>
             <div id = "button1">
-              <button type="submit" onclick = "return calculate();" value ="Submit" id = "button" align = "center" text-align= "center" style="display:none" >Submit</button>
+              <button type="submit" onclick = "return calculate();" value ="Submit" id = "button" align = "center" style="display:none" >Submit</button>
             </div>
           </div>
           <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>

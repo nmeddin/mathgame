@@ -793,11 +793,28 @@ function Game() {
     document.getElementById('start').style.display = "none";
     document.getElementById('continue').style.display = "block";
     document.getElementById('game-over').style.display = "none";
+    
     document.getElementById('problem1').style.display = "none";
     document.getElementById('problem2').style.display = "none";
     document.getElementById('problem3').style.display = "none";
     document.getElementById('problem4').style.display = "none";
     document.getElementById('problem5').style.display = "none";
+    document.getElementById('problem6').style.display = "none";
+    document.getElementById('problem7').style.display = "none";
+    document.getElementById('problem8').style.display = "none";
+    document.getElementById('problem9').style.display = "none";
+    document.getElementById('problem10').style.display = "none";
+    document.getElementById('problem11').style.display = "none";
+    document.getElementById('problem12').style.display = "none";
+    document.getElementById('problem13').style.display = "none";
+    document.getElementById('problem14').style.display = "none";
+    document.getElementById('problem15').style.display = "none";
+    document.getElementById('problem16').style.display = "none";
+    document.getElementById('problem17').style.display = "none";
+    document.getElementById('problem18').style.display = "none";
+    document.getElementById('problem19').style.display = "none";
+    document.getElementById('problem20').style.display = "none";
+    
     document.getElementById('numPro').style.display = "none";
     document.getElementById('button1').style.display = "none";
     document.getElementById('button').style.display = "none";
@@ -819,11 +836,28 @@ function Game() {
     document.getElementById('button').style.display = "none";
     // document.getElementById('score').style.display = "block";
     document.getElementById('finalMess').style.display = "none";
+    
     document.getElementById('problem1').style.display = "none";
     document.getElementById('problem2').style.display = "none";
     document.getElementById('problem3').style.display = "none";
     document.getElementById('problem4').style.display = "none";
     document.getElementById('problem5').style.display = "none";
+    document.getElementById('problem6').style.display = "none";
+    document.getElementById('problem7').style.display = "none";
+    document.getElementById('problem8').style.display = "none";
+    document.getElementById('problem9').style.display = "none";
+    document.getElementById('problem10').style.display = "none";
+    document.getElementById('problem11').style.display = "none";
+    document.getElementById('problem12').style.display = "none";
+    document.getElementById('problem13').style.display = "none";
+    document.getElementById('problem14').style.display = "none";
+    document.getElementById('problem15').style.display = "none";
+    document.getElementById('problem16').style.display = "none";
+    document.getElementById('problem17').style.display = "none";
+    document.getElementById('problem18').style.display = "none";
+    document.getElementById('problem19').style.display = "none";
+    document.getElementById('problem20').style.display = "none";
+
     document.getElementById('numPro').style.display = "none";
     //document.getElementById('score').style.display = "block";
     this.bgContext.clearRect(0, 0, this.bgCanvas.width, this.bgCanvas.height);
@@ -849,7 +883,7 @@ function Game() {
   };
   // Game over for now temporary.
   this.gameOver = function() {
-    var num = Math.floor(Math.random() * 5)+1;
+    var num = Math.floor(Math.random() * 20)+1;
     var str = "problem"+num;
     this.backgroundAudio.pause();
     this.gameOverAudio.currentTime = 0;
@@ -880,11 +914,28 @@ function Game() {
     document.getElementById('button').style.display = "none";
     document.getElementById('showScore').style.display = "none";
     document.getElementById('finalMess').style.display = "block";
+
     document.getElementById('problem1').style.display = "none";
     document.getElementById('problem2').style.display = "none";
     document.getElementById('problem3').style.display = "none";
     document.getElementById('problem4').style.display = "none";
     document.getElementById('problem5').style.display = "none";
+    document.getElementById('problem6').style.display = "none";
+    document.getElementById('problem7').style.display = "none";
+    document.getElementById('problem8').style.display = "none";
+    document.getElementById('problem9').style.display = "none";
+    document.getElementById('problem10').style.display = "none";
+    document.getElementById('problem11').style.display = "none";
+    document.getElementById('problem12').style.display = "none";
+    document.getElementById('problem13').style.display = "none";
+    document.getElementById('problem14').style.display = "none";
+    document.getElementById('problem15').style.display = "none";
+    document.getElementById('problem16').style.display = "none";
+    document.getElementById('problem17').style.display = "none";
+    document.getElementById('problem18').style.display = "none";
+    document.getElementById('problem19').style.display = "none";
+    document.getElementById('problem20').style.display = "none";
+
     document.getElementById('numPro').style.display = "none";
     var theOld = document.getElementById('score').innerHTML;
     document.getElementById('scoreOld').innerHTML = theOld;
