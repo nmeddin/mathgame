@@ -37,13 +37,13 @@ body{
 }
 .headtitle{
   font: 100 80px/0.8 'Pathway Gothic One', sans-serif;
-  color: #ffc107;
+  color:#FFFF33;
   text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
 }
 .jumbotron-heading {
   font-weight: 200;
   font: 100 80px/0.8 'Pathway Gothic One', sans-serif;
-  color: #ffc107;
+  color: #FFFF33;
   text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
 }
 
@@ -63,6 +63,7 @@ footer p {
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
 
 .theCanvas{
+  color:#FFFF33;
   width: 100%;
   text-align: center;
   background-color:transparent;
@@ -76,6 +77,7 @@ footer p {
 }
 canvas{
           position: absolute;
+          color::#FFFF33;
           padding-top: 20px;
           margin-left: auto;
           display: inline;
@@ -136,15 +138,17 @@ canvas{
         cursor: default;
       }
       .start{
+        font: 100 80px/0.8 'Pathway Gothic One', sans-serif;
+        color:#FFFF33;
+        text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
         text-align: center;
-        color: #ffc107;
         font-size:50px;
-        font-family: Helvetica, sans-serif;
         cursor: default;
         display: block;
       }
 
       .start span {
+        color:#FFFF33;
         font-size: 80px;
         cursor: pointer;
         position: relative;
@@ -152,7 +156,7 @@ canvas{
         left: 0px;
       }
       .start span:hover {
-        color: #ffc107;
+        color: :#FFFF33;
       }
       .continue {
         text-align: center;
