@@ -105,18 +105,18 @@ canvas{
         z-index: 0;
       }
       .showScore {
-        color: white;
+        color:#FFFF33;
         font-family: Helvetica, sans-serif;
         cursor: default;
         display:none;
       }.score{
         font-size:25px;
-        color:white;
+        color:#FFFF33;
         display:none;
       }
       .game-over {
         text-align: center;
-        color: black;
+        color:#FFFF33;
         font-family: Helvetica, sans-serif;
         font-size: 30px;
         cursor: default;
@@ -129,10 +129,10 @@ canvas{
         left: 50px;
       }
       .game-over span:hover {
-        color: #ffc107;
+        color:#FFFF33;
       }
       .loading {
-        color: white;
+        color:#FFFF33;
         font-family: Helvetica, sans-serif;
         font-size: 30px;
         cursor: default;
@@ -160,7 +160,7 @@ canvas{
       }
       .continue {
         text-align: center;
-        color: red;
+        color: :#FFFF33;
         font-size:45px;
         font-family: Helvetica, sans-serif;
         cursor: default;
